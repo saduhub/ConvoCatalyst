@@ -4,12 +4,14 @@
   "description": "A PWA designed to serve as a catalyst for engaging and entertaining conversations ad-free. Accessible anywhere, all you need is your phone to access a collection of thought-provoking questions. It is perfect for breaking the ice and sparking discussions among friends. Each question is meant to have friends exploring, laughing, and debating on topics that unravel into completely different conversations.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4"
   }
 }
