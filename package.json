@@ -4,17 +4,26 @@
   "description": "A PWA designed to serve as a catalyst for engaging and entertaining conversations ad-free. Accessible anywhere, all you need is your phone to access a collection of thought-provoking questions. It is perfect for breaking the ice and sparking discussions among friends. Each question is meant to have friends exploring, laughing, and debating on topics that unravel into completely different conversations.",
   "main": "index.js",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "dev": "webpack-dev-server --open"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
     "@typescript-eslint/eslint-plugin": "^7.1.0",
     "@typescript-eslint/parser": "^7.1.0",
+    "babel-loader": "^9.1.3",
+    "css-loader": "^6.10.0",
     "eslint": "^8.57.0",
+    "html-webpack-plugin": "^5.6.0",
+    "mini-css-extract-plugin": "^2.8.1",
+    "style-loader": "^3.3.4",
     "typescript": "^5.3.3",
     "webpack": "^5.90.3",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   }
 }
