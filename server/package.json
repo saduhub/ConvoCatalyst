@@ -4,7 +4,8 @@
   "description": "A PWA designed to serve as a catalyst for engaging and entertaining conversations ad-free. Accessible anywhere, all you need is your phone to access a collection of thought-provoking questions. It is perfect for breaking the ice and sparking discussions among friends. Each question is meant to have friends exploring, laughing, and debating on topics that unravel into completely different conversations.",
   "main": "index.js",
   "scripts": {
-    "server": "node server.js --ignore client"
+    "server": "node server.js --ignore client",
+    "seed": "cd config && node seed.js"
   },
   "keywords": [],
   "author": "",
