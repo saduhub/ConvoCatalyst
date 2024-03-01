@@ -1,13 +1,19 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const express_1 = __importDefault(require("express"));
-const app = (0, express_1.default)();
+const express = require("express");
+const path = require("path");
+const mongoose = require("mongoose");
+// Connect to database 
+require("dotenv").config({ path: path.join(__dirname, "../.env") });
+mongoose.connect(
+    process.env.MONGODB_URI
+);
+
+const app = express();
 const PORT = process.env.PORT || 3000;
-app.use(express_1.default.static('../client/dist'));
-app.use(express_1.default.urlencoded({ extended: true }));
-app.use(express_1.default.json());
-app.get('/', (req, res) => res.sendFile('../client/dist/index.html'));
-app.listen(PORT, () => console.log(`Now listening on port: ${PORT}`));
+
+app.use(express.static('../client/dist'));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+app.get('/', (req, res) =>
+    res.sendFile('../client/dist/index.html')
+);
